@@ -10,6 +10,14 @@
 		40B44CD123F282E9001839BB /* NetworkAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44CC723F282E9001839BB /* NetworkAPI.framework */; };
 		40B44CD623F282E9001839BB /* NetworkAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44CD523F282E9001839BB /* NetworkAPITests.swift */; };
 		40B44CD823F282E9001839BB /* NetworkAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 40B44CCA23F282E9001839BB /* NetworkAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40B44CE423F287F3001839BB /* MoyaWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44CE323F287F3001839BB /* MoyaWrapper.swift */; };
+		40B44CE623F28816001839BB /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44CE523F28816001839BB /* Error.swift */; };
+		40B44CE823F28848001839BB /* MoviesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44CE723F28848001839BB /* MoviesApi.swift */; };
+		40B44CEA23F2886A001839BB /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44CE923F2886A001839BB /* MoviesService.swift */; };
+		40B44CED23F2889C001839BB /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44CEC23F2889C001839BB /* Moya.framework */; };
+		40B44CEF23F288A2001839BB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44CEE23F288A2001839BB /* Alamofire.framework */; };
+		40B44CF123F288A7001839BB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44CF023F288A7001839BB /* Result.framework */; };
+		40B44CF323F2890A001839BB /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44CF223F2890A001839BB /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +37,14 @@
 		40B44CD023F282E9001839BB /* NetworkAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B44CD523F282E9001839BB /* NetworkAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPITests.swift; sourceTree = "<group>"; };
 		40B44CD723F282E9001839BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40B44CE323F287F3001839BB /* MoyaWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaWrapper.swift; sourceTree = "<group>"; };
+		40B44CE523F28816001839BB /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		40B44CE723F28848001839BB /* MoviesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesApi.swift; sourceTree = "<group>"; };
+		40B44CE923F2886A001839BB /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
+		40B44CEC23F2889C001839BB /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		40B44CEE23F288A2001839BB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		40B44CF023F288A7001839BB /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		40B44CF223F2890A001839BB /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B44CED23F2889C001839BB /* Moya.framework in Frameworks */,
+				40B44CEF23F288A2001839BB /* Alamofire.framework in Frameworks */,
+				40B44CF123F288A7001839BB /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +75,7 @@
 				40B44CC923F282E9001839BB /* NetworkAPI */,
 				40B44CD423F282E9001839BB /* NetworkAPITests */,
 				40B44CC823F282E9001839BB /* Products */,
+				40B44CEB23F2889C001839BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +93,11 @@
 			children = (
 				40B44CCA23F282E9001839BB /* NetworkAPI.h */,
 				40B44CCB23F282E9001839BB /* Info.plist */,
+				40B44CE323F287F3001839BB /* MoyaWrapper.swift */,
+				40B44CE523F28816001839BB /* Error.swift */,
+				40B44CE723F28848001839BB /* MoviesApi.swift */,
+				40B44CE923F2886A001839BB /* MoviesService.swift */,
+				40B44CF223F2890A001839BB /* Movie.swift */,
 			);
 			path = NetworkAPI;
 			sourceTree = "<group>";
@@ -84,6 +109,16 @@
 				40B44CD723F282E9001839BB /* Info.plist */,
 			);
 			path = NetworkAPITests;
+			sourceTree = "<group>";
+		};
+		40B44CEB23F2889C001839BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40B44CF023F288A7001839BB /* Result.framework */,
+				40B44CEE23F288A2001839BB /* Alamofire.framework */,
+				40B44CEC23F2889C001839BB /* Moya.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +183,7 @@
 				TargetAttributes = {
 					40B44CC623F282E9001839BB = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					40B44CCF23F282E9001839BB = {
 						CreatedOnToolsVersion = 10.2;
@@ -194,6 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B44CE623F28816001839BB /* Error.swift in Sources */,
+				40B44CE823F28848001839BB /* MoviesApi.swift in Sources */,
+				40B44CEA23F2886A001839BB /* MoviesService.swift in Sources */,
+				40B44CE423F287F3001839BB /* MoyaWrapper.swift in Sources */,
+				40B44CF323F2890A001839BB /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,12 +382,17 @@
 		40B44CDC23F282E9001839BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NetworkAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,6 +403,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.inan.NetworkAPI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,12 +412,17 @@
 		40B44CDD23F282E9001839BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NetworkAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -389,6 +441,7 @@
 		40B44CDF23F282E9001839BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NetworkAPITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +459,7 @@
 		40B44CE023F282E9001839BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NetworkAPITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
