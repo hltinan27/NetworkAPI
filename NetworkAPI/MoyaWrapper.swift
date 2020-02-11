@@ -16,7 +16,7 @@ public class MoyaWrapper<T: TargetType> {
     
     var provider: MoyaProvider<T>
     
-    init() {
+    public init() {
         self.provider = MoyaProvider<T>(endpointClosure: endpointClosure, requestClosure: requestClosure, plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)])
     }
     

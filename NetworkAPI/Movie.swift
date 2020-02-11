@@ -19,6 +19,7 @@ public struct Movie: Codable, Equatable {
         case genres
     }
     
+    
     public let artistName: String
     public let releaseDate: Date
     public let name: String
