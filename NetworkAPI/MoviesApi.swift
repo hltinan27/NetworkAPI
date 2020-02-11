@@ -13,6 +13,7 @@ public enum MoviesApi {
     case moviesList
 }
 
+
 extension MoviesApi: TargetType {
     public var baseURL: URL {
         return URL(string: API_BASE_URL)!
