@@ -8,9 +8,17 @@
 
 import Foundation
 
-public final class CustomContainer {
+ public final class CustomContainer {
     
-    public init() {}
+    struct Dependencies {
+        let customService: CustomService
+    }
+    
+    private let dependencies: Dependencies
+    
+    init(dependencies: Dependencies) {
+        self.dependencies = dependencies
+    }
     
     public func makeCustomUseCase() -> CustomUseCase {
         return DefaultCustomUseCase(customRepository: makeCustomRepository())
@@ -18,6 +26,6 @@ public final class CustomContainer {
     
     // MARK: - Repositories
     public func makeCustomRepository() -> CustomRepository {
-        return DefaultCustomRepository(service: CustomService())
+        return DefaultCustomRepository(service: dependencies.customService)
     }
 }

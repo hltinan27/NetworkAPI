@@ -25,6 +25,7 @@
 		40B44D3C23F2EAB4001839BB /* CustomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44D3B23F2EAB4001839BB /* CustomService.swift */; };
 		40B44D3E23F2EAC2001839BB /* CustomApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44D3D23F2EAC2001839BB /* CustomApi.swift */; };
 		40B44D4023F349D3001839BB /* CustomContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44D3F23F349D3001839BB /* CustomContainer.swift */; };
+		40B44D9E23F3D497001839BB /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44D9D23F3D497001839BB /* AppDIContainer.swift */; };
 		40E9392023F3479900962DBA /* CustomUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E9391F23F3479900962DBA /* CustomUseCase.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		40B44D3B23F2EAB4001839BB /* CustomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomService.swift; sourceTree = "<group>"; };
 		40B44D3D23F2EAC2001839BB /* CustomApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomApi.swift; sourceTree = "<group>"; };
 		40B44D3F23F349D3001839BB /* CustomContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContainer.swift; sourceTree = "<group>"; };
+		40B44D9D23F3D497001839BB /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		40E9391F23F3479900962DBA /* CustomUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 		40B44D2323F2D168001839BB /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				40B44D9D23F3D497001839BB /* AppDIContainer.swift */,
 				40B44D3F23F349D3001839BB /* CustomContainer.swift */,
 			);
 			path = Application;
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B44D9E23F3D497001839BB /* AppDIContainer.swift in Sources */,
 				40B44D3E23F2EAC2001839BB /* CustomApi.swift in Sources */,
 				40B44D3223F2D730001839BB /* Cancellable.swift in Sources */,
 				40B44CE623F28816001839BB /* Error.swift in Sources */,
