@@ -73,6 +73,55 @@ public class MoyaWrapper<T: TargetType> {
         }
     }
     
+    func requestString(_ target: T, callbackQueue: DispatchQueue? = .none, progress: ProgressBlock? = .none, completion: @escaping (_ response: String?, _ error: Error?) -> Void) {
+        self.provider.request(target, callbackQueue: callbackQueue, progress: progress) { result in
+            switch result
+            {
+            case let .success(moyaResponse):
+                do
+                {
+                    if let httpResponse = moyaResponse.response {
+                        
+                        if (httpResponse.statusCode == 200)
+                        {
+                            let response = try moyaResponse.mapString()
+                            completion(response, nil)
+                        }
+                        else if (httpResponse.statusCode == 422)
+                        {
+                            print(try moyaResponse.mapString())
+                        }
+                        else if (httpResponse.statusCode == 500)
+                        {
+                            let error: Error = (try moyaResponse.map(ErrorWrapper.self) as ErrorWrapper).Error
+                            completion(nil, error)
+                        }
+                        else if (httpResponse.statusCode == 401 || httpResponse.statusCode == 403)
+                        {
+                            let error: Error = (try moyaResponse.map(ErrorWrapper.self) as ErrorWrapper).Error
+                            completion(nil, error)
+                        } else if (httpResponse.statusCode == 404) {
+                            let error = Error(errorCode: ErrorCode.ApiFailure, errorMessage: "İşleminizi şu anda gerçekleştiremiyoruz.")
+                            completion(nil, error)
+                        }
+                    }
+                }
+                catch
+                {
+                    let error = Error(errorCode: ErrorCode.ApiFailure, errorMessage: "İşleminizi şu anda gerçekleştiremiyoruz.")
+                    completion(nil, error)
+                }
+                break
+            case let .failure(moyaError):
+                print("MOYA EROR")
+                print(moyaError)
+                let error = Error(errorCode: ErrorCode.ApiFailure, errorMessage: "İşleminizi şu anda gerçekleştiremiyoruz.")
+                completion(nil, error)
+                break
+            }
+        }
+    }
+    
     let endpointClosure = { (target: T) -> Endpoint in
         let url = target.baseURL.appendingPathComponent(target.path).absoluteString
         

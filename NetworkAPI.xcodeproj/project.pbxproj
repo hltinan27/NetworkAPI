@@ -18,6 +18,14 @@
 		40B44CEF23F288A2001839BB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44CEE23F288A2001839BB /* Alamofire.framework */; };
 		40B44CF123F288A7001839BB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B44CF023F288A7001839BB /* Result.framework */; };
 		40B44CF323F2890A001839BB /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44CF223F2890A001839BB /* Movie.swift */; };
+		40B44D3223F2D730001839BB /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44D3123F2D730001839BB /* Cancellable.swift */; };
+		40B44D3523F2DCBC001839BB /* CustomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44D3423F2DCBC001839BB /* CustomRequest.swift */; };
+		40B44D3723F2E166001839BB /* CustomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44D3623F2E166001839BB /* CustomRepository.swift */; };
+		40B44D3923F2E7EF001839BB /* DefaultCustomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44D3823F2E7EF001839BB /* DefaultCustomRepository.swift */; };
+		40B44D3C23F2EAB4001839BB /* CustomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44D3B23F2EAB4001839BB /* CustomService.swift */; };
+		40B44D3E23F2EAC2001839BB /* CustomApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44D3D23F2EAC2001839BB /* CustomApi.swift */; };
+		40B44D4023F349D3001839BB /* CustomContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B44D3F23F349D3001839BB /* CustomContainer.swift */; };
+		40E9392023F3479900962DBA /* CustomUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E9391F23F3479900962DBA /* CustomUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,14 @@
 		40B44CEE23F288A2001839BB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		40B44CF023F288A7001839BB /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		40B44CF223F2890A001839BB /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		40B44D3123F2D730001839BB /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		40B44D3423F2DCBC001839BB /* CustomRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRequest.swift; sourceTree = "<group>"; };
+		40B44D3623F2E166001839BB /* CustomRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRepository.swift; sourceTree = "<group>"; };
+		40B44D3823F2E7EF001839BB /* DefaultCustomRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCustomRepository.swift; sourceTree = "<group>"; };
+		40B44D3B23F2EAB4001839BB /* CustomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomService.swift; sourceTree = "<group>"; };
+		40B44D3D23F2EAC2001839BB /* CustomApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomApi.swift; sourceTree = "<group>"; };
+		40B44D3F23F349D3001839BB /* CustomContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContainer.swift; sourceTree = "<group>"; };
+		40E9391F23F3479900962DBA /* CustomUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +107,12 @@
 		40B44CC923F282E9001839BB /* NetworkAPI */ = {
 			isa = PBXGroup;
 			children = (
-				40B44CCA23F282E9001839BB /* NetworkAPI.h */,
-				40B44CCB23F282E9001839BB /* Info.plist */,
-				40B44CE323F287F3001839BB /* MoyaWrapper.swift */,
-				40B44CE523F28816001839BB /* Error.swift */,
+				40B44D2323F2D168001839BB /* Application */,
+				40B44D2423F2D172001839BB /* Domain */,
+				40B44D2523F2D1BB001839BB /* Data */,
+				40B44D3023F2D6EC001839BB /* Common */,
+				40B44D3323F2D8FB001839BB /* Infrastructure */,
+				40B44D2623F2D1F5001839BB /* Resources */,
 				40B44CE723F28848001839BB /* MoviesApi.swift */,
 				40B44CE923F2886A001839BB /* MoviesService.swift */,
 				40B44CF223F2890A001839BB /* Movie.swift */,
@@ -119,6 +137,108 @@
 				40B44CEC23F2889C001839BB /* Moya.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40B44D2323F2D168001839BB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				40B44D3F23F349D3001839BB /* CustomContainer.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		40B44D2423F2D172001839BB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				40B44D2D23F2D2F4001839BB /* UseCases */,
+				40B44D2C23F2D2CD001839BB /* Entities */,
+				40B44D2B23F2D2C5001839BB /* Protocols */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		40B44D2523F2D1BB001839BB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				40B44D2F23F2D40A001839BB /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		40B44D2623F2D1F5001839BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				40B44CCA23F282E9001839BB /* NetworkAPI.h */,
+				40B44CCB23F282E9001839BB /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		40B44D2B23F2D2C5001839BB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				40B44D2E23F2D380001839BB /* Repositories */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		40B44D2C23F2D2CD001839BB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				40B44D3423F2DCBC001839BB /* CustomRequest.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		40B44D2D23F2D2F4001839BB /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				40E9391F23F3479900962DBA /* CustomUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		40B44D2E23F2D380001839BB /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				40B44D3623F2E166001839BB /* CustomRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		40B44D2F23F2D40A001839BB /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				40B44D3823F2E7EF001839BB /* DefaultCustomRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		40B44D3023F2D6EC001839BB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				40B44D3123F2D730001839BB /* Cancellable.swift */,
+				40B44CE523F28816001839BB /* Error.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		40B44D3323F2D8FB001839BB /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				40B44D3A23F2E87B001839BB /* Custom */,
+				40B44CE323F287F3001839BB /* MoyaWrapper.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		40B44D3A23F2E87B001839BB /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				40B44D3B23F2EAB4001839BB /* CustomService.swift */,
+				40B44D3D23F2EAC2001839BB /* CustomApi.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,11 +350,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B44D3E23F2EAC2001839BB /* CustomApi.swift in Sources */,
+				40B44D3223F2D730001839BB /* Cancellable.swift in Sources */,
 				40B44CE623F28816001839BB /* Error.swift in Sources */,
+				40B44D3523F2DCBC001839BB /* CustomRequest.swift in Sources */,
 				40B44CE823F28848001839BB /* MoviesApi.swift in Sources */,
+				40B44D3C23F2EAB4001839BB /* CustomService.swift in Sources */,
+				40B44D3723F2E166001839BB /* CustomRepository.swift in Sources */,
+				40B44D3923F2E7EF001839BB /* DefaultCustomRepository.swift in Sources */,
 				40B44CEA23F2886A001839BB /* MoviesService.swift in Sources */,
 				40B44CE423F287F3001839BB /* MoyaWrapper.swift in Sources */,
+				40E9392023F3479900962DBA /* CustomUseCase.swift in Sources */,
 				40B44CF323F2890A001839BB /* Movie.swift in Sources */,
+				40B44D4023F349D3001839BB /* CustomContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +521,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = NetworkAPI/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NetworkAPI/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -423,7 +551,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = NetworkAPI/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NetworkAPI/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
